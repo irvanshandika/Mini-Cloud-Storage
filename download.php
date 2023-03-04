@@ -1,9 +1,9 @@
 <?php
 // konfigurasi database
 $servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "db_simpan_file";
+$username = "id20394938_irvanshandika";
+$password = "S!?CKjl/M(4DkiKO";
+$dbname = "id20394938_db_simpan_file";
 
 // koneksi ke database
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -22,17 +22,17 @@ if ($result->num_rows > 0) {
     // ambil informasi file dari hasil query
     $row = $result->fetch_assoc();
     $filename = $row["filename"];
-    $filecontent = $row["filecontent"];
+    // $filecontent = $row["filecontent"];
     $filesize = $row["filesize"];
-    $filetype = $row["filetype"];
+    // $filetype = $row["filetype"];
 
     // header untuk mengunduh file
     header("Content-length: $filesize");
-    header("Content-type: $filetype");
+    // header("Content-type: $filetype");
     header("Content-Disposition: attachment; filename=$filename");
 
     // tampilkan isi file
-    echo $filecontent;
+    // echo $filecontent;
 } else {
     echo "File not found.";
 }

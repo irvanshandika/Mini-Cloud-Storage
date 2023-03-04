@@ -4,21 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./assets/style/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <title>Upload</title>
+    
+    <title>Mini Cloud Storage</title>
 </head>
 <body>
-  <div class="container d-flex justify-content-center">
-    <form class="form-upload" action="upload.php" method="post" enctype="multipart/form-data">
-      <div class="mb-3">
-        <label for="file">Upload Here: </label>
-        <input type="file" name="fileToUpload">
-      </div>
-      <div class="mb-3">
-        <input class="btn btn-primary" type="submit" value="Upload" name="submit">
-      </div>
-    </form>
-  </div>
+  <!--<div class="container d-flex justify-content-center">-->
+  <!--  <form class="form-upload" action="upload.php" method="post" enctype="multipart/form-data">-->
+  <!--    <div class="mb-3">-->
+  <!--      <label for="file" class="form-label">Upload Here: </label>-->
+  <!--      <input class="form-control" type="file" name="fileToUpload" multiple>-->
+  <!--    </div>-->
+  <!--    <div class="mb-3">-->
+  <!--      <button class="buttonDownload" type="submit" name="submit">Upload</button>-->
+  <!--    </div>-->
+  <!--  </form>-->
+  <!--</div>-->
+  
+  <div class="container">
+		<form action="upload.php" method="post" enctype="multipart/form-data">
+			<label for="file">Choose a file:</label>
+			<input class="inpdddut" name="fileToUpload" type="file">
+			<!--<input value="Upload" type="submit" name="submit" class="inpdddut">-->
+			<button class="inpdddut" type="submit" name="submit">Upload</button>
+		</form>
+	</div>
+  
 <div class="container text-center">
   <div class="row">
     <div class="col">
@@ -34,9 +46,9 @@
 </div>
 <?php
 $servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "db_simpan_file";
+$username = "id20394938_irvanshandika";
+$password = "S!?CKjl/M(4DkiKO";
+$dbname = "id20394938_db_simpan_file";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -69,13 +81,6 @@ if ($result->num_rows > 0) {
     </div>
   </div>
 </div>
-    <!-- echo "<tr>";
-    echo "<td>" . $row["filename"] . "</td>";
-    echo '<br>';
-    echo "<td>" . $row["filesize"] . "</td>";
-    echo "<td><a href='download.php?id=". $row["id"] ."' target='_blank'>Download</a></td>";
-    echo "<td><a href='delete.php?id=". $row["id"] ."'>Delete</a></td>";
-    echo "</tr>"; -->
     <?php
   }
 } else {

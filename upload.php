@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "db_simpan_file";
+$username = "id20394938_irvanshandika";
+$password = "S!?CKjl/M(4DkiKO";
+$dbname = "id20394938_db_simpan_file";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
